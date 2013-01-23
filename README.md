@@ -25,7 +25,7 @@ Then, you will be able to use the datasource from your database config:
 
 The component can be enabled on per-model basis. To enable delayed insert and/or update in a model, declare public boolean variables named **$delayedInserts** and **$delayedUpdates** into the class of this model:
 
-    class MyModel {
+    class MyModel extends AppModel {
         public $delayedInserts = true;   // each INSERT will actually be a INSERT DELAYED
         public $delayedUpdates = true;   // each UPDATE will actually be a UPDATE LOW_PRIORITY
         ...
